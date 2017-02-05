@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vending Machine</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="padding:0 20px">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Кошелек Пользователя</h3>
+                <div id="userWallet_container"></div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <h3>Внесенная сумма</h3>
+                <div class="jumbotron" style="padding-left:10px;">
+                    <h1 id="entered_summ">0</h1>
+                </div>
+                <button type="button" id="btnChange" class="btn btn-primary">Сдача</button>
+                <div id="allert-container"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Кошелек Машины</h3>
+                <div id="vwWallet_container"></div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <h3>Ассортимент товаров</h3>
+                <div id="products_container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/vm.js"></script>
+</body>
+</html>

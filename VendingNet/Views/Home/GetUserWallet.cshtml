@@ -1,0 +1,26 @@
+﻿@using VendingNet.Models
+@model Dictionary<FaceValueTypes, int>
+@{
+    Layout = null;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Номинал</th>
+            <th>Кол-во</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var key in Model.Keys)
+        {
+            <tr>
+                <td>@Coin.GetInfo(key).Title</td>
+                <td>@Model[key]</td>
+                <td><button data-face="@key" class="btn btn-default btn-sm @(Model[key]==0 ? "disabled":"enter-button")">Внести</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
